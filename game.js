@@ -16,20 +16,12 @@ function playRound(playerSelection, computerSelection) {
     computerSelection = computerSelection.toLowerCase()
 
     if (playerSelection == computerSelection) {
-        return "It's a tie!"
-    } else if (playerSelection == "rock" && computerSelection == "scissors") {
-        return "You Win! Rock beats Scissors"
-    } else if (playerSelection == "rock" && computerSelection == "paper") {
-        return "You Lose! Paper beats Rock"
-    } else if (playerSelection == "paper" && computerSelection == "rock") {
-        return "You Win! Paper beats Rock"
-    } else if (playerSelection == "paper" && computerSelection == "scissors") {
-        return "You Lose! Scissors beats Paper"
-    } else if (playerSelection == "scissors" && computerSelection == "paper") {
-        return "You Win! Scissors beats Paper"
-    } else if (playerSelection == "scissors" && computerSelection == "rock") {
-        return "You Lose! Rock beats Scissors"
-    }  
+        return "T"
+    } else if ((playerSelection == "rock" && computerSelection == "scissors") || (playerSelection == "paper" && computerSelection == "rock") || (playerSelection == "scissors" && computerSelection == "paper")) {
+        return "W";
+    } else {
+        return "L";
+    }
 }
 
 function game() {
@@ -41,12 +33,15 @@ function game() {
         let playerSelection = prompt("Pick your item: "); 
         let computerSelection = getComputerChoice();
         round = playRound(playerSelection, computerSelection);
-        console.log(round);
-
-        if (round[4] == "W") {
+        
+        if (round == "W") {
+            console.log(`You Win! ${playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase()} beats ${computerSelection}`);
             scorePlayer++;
-        } else if (round[4] == "L") {
+        } else if (round == "L") {
+            console.log(`You Lose! ${computerSelection} beats ${playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase()}`);
             scoreComputer++;
+        } else {
+            console.log("It's a tie!")
         }
 
         console.log("Player score:    " + scorePlayer);
@@ -61,4 +56,6 @@ function game() {
         }
     }
 }
+
+game();
 

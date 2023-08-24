@@ -1,3 +1,10 @@
+* {
+    /*border: 2px solid red;*/
+}
+
+body {
+    background-color: rgb(186, 239, 255);
+}
 .buttons {
     display: flex;
     justify-content: center;
@@ -13,16 +20,17 @@
 
 
 button {
-    background-color: rgb(80, 242, 248);
+    /*background-color: rgb(80, 242, 248);*/
     color: rgb(125, 0, 46);
-    height: 100px;
+    height: 70px;
     width: 300px;
     border: 3px solid rgb(1, 98, 195);
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 55px;
     font-weight: 100;
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .results {
@@ -32,12 +40,19 @@ button {
     font-size: 38px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    padding-top: 30px;
 }
 
 .text {
-    font-size: 38px;
+    font-size: 48px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    padding-top: 30px;
+    margin: 30px;
+    font-weight: 600;
+}
+
+.text2 {
+    font-size: 32px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-weight: 400;
 }

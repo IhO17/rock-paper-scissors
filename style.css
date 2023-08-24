@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     gap: 160px;
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 
@@ -25,9 +25,19 @@ button {
     margin-top: 50px;
 }
 
+.results {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    font-size: 38px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding-top: 30px;
+}
+
 .text {
     font-size: 38px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 30px;
 }

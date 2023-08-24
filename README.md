@@ -2,4 +2,4 @@
 
 Third exercise on TOP.
 
-Game version without GUI.
+Update now with GUI
